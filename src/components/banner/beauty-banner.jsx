@@ -3,9 +3,6 @@ import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, EffectFade, Pagination } from "swiper";
 // internal
-import slider_bg_1 from "@assets/img/slider/3/slider-1.jpg";
-import slider_bg_2 from "@assets/img/slider/3/slider-2.jpg";
-import slider_bg_3 from "@assets/img/slider/3/slider-3.jpg";
 import { ArrowNext, ArrowPrev, Cosmetics, Meckoup, VeganProduct } from "@/svg";
 
 // slider setting
@@ -28,40 +25,36 @@ const slider_setting = {
 const slider_data = [
   {
     id: 1,
-    bg: slider_bg_1,
+    bg: "/assets/img/slider/3/slider-1.jpg",
     subtitle: "Winter Collection 2023",
     title: "Be your kind of beauty",
   },
   {
     id: 2,
-    bg: slider_bg_2,
+    bg: "/assets/img/slider/3/slider-2.jpg",
     subtitle: "Top Brand Collection",
     title: "Use the best for you.",
   },
   {
     id: 3,
-    bg: slider_bg_3,
+    bg: "/assets/img/slider/3/slider-3.jpg",
     subtitle: "Awesome Beauty Products",
     title: "Don't Worry for Skincare",
   },
 ];
 
-// feature item 
+// feature item
 function FeatureItem({ icon, title }) {
   return (
     <div className="tp-slider-feature-item-3 d-flex mb-30">
       <div className="tp-slider-feature-icon-3">
-        <span>
-          {icon}
-        </span>
+        <span>{icon}</span>
       </div>
       <div className="tp-slider-feature-content-3">
-        <h3 className="tp-slider-feature-title-3">
-          {title}
-        </h3>
+        <h3 className="tp-slider-feature-title-3">{title}</h3>
       </div>
     </div>
-  )
+  );
 }
 
 const BeautyBanner = () => {
@@ -91,9 +84,30 @@ const BeautyBanner = () => {
                         Be your kind of beauty
                       </h3>
                       <div className="tp-slider-feature-3 d-flex flex-wrap align-items-center p-relative z-index-1 mb-15">
-                        <FeatureItem icon={<Cosmetics />} title={<>High-end <br /> Cosmetics</>} />
-                        <FeatureItem icon={<VeganProduct />} title={<>Vegan <br /> Product</>} />
-                        <FeatureItem icon={<Meckoup />} title={<>Express <br /> Make-up</>} />
+                        <FeatureItem
+                          icon={<Cosmetics />}
+                          title={
+                            <>
+                              High-end <br /> Cosmetics
+                            </>
+                          }
+                        />
+                        <FeatureItem
+                          icon={<VeganProduct />}
+                          title={
+                            <>
+                              Vegan <br /> Product
+                            </>
+                          }
+                        />
+                        <FeatureItem
+                          icon={<Meckoup />}
+                          title={
+                            <>
+                              Express <br /> Make-up
+                            </>
+                          }
+                        />
                       </div>
                       <div className="tp-slider-btn-3">
                         <Link

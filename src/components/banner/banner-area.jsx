@@ -2,8 +2,6 @@ import React from "react";
 import Link from "next/link";
 // internal
 import { ArrowRight } from "@/svg";
-import banner_1 from "@assets/img/product/banner/product-banner-1.jpg";
-import banner_2 from "@assets/img/product/banner/product-banner-2.jpg";
 
 
 // banner item
@@ -42,7 +40,7 @@ const BannerArea = () => {
         <div className="row">
           <div className="col-xl-8 col-lg-7">
             <BannerItem
-              bg={banner_1}
+              bg={"/assets/img/product/banner/product-banner-1.jpg"}
               title={
                 <>
                   Smartphone <br /> BLU G91 Pro 2022
@@ -53,7 +51,7 @@ const BannerArea = () => {
           <div className="col-xl-4 col-lg-5">
             <BannerItem
               sm={true}
-              bg={banner_2}
+              bg={"/assets/img/product/banner/product-banner-2.jpg"}
               title={
                 <>
                   HyperX Cloud II <br /> Wireless

@@ -24,7 +24,6 @@ const ProductArea = () => {
   const handleActiveTab = (e, tab) => {
     setActiveTab(tab);
   };
-
   // decide what to render
   let content = null;
 
@@ -42,6 +41,8 @@ const ProductArea = () => {
   if (!isLoading && !isError && products?.data?.length > 0) {
 
     let product_items = products.data;
+    console.log({product_items})
+
     if (activeTab === 'All Collection') {
       product_items = products.data
     }
@@ -91,6 +92,7 @@ const ProductArea = () => {
         {product_items.map((prd) => (
           <div key={prd._id} className="col-xl-3 col-lg-4 col-sm-6">
             <ProductItem product={prd} />
+        
           </div>
         ))}
       </div>
